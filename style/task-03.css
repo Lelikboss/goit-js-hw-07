@@ -1,0 +1,8 @@
+.position-img {
+  width: 250px;
+  height: 150px;
+}
+.gallery--position {
+  display: flex;
+  justify-content: space-around;
+}
