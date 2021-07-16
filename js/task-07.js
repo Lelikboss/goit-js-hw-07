@@ -6,6 +6,6 @@ const refs = {
 refs.controlRange.addEventListener("input", textSizeChange);
 refs.controlRange.value = 16;
 
-function textSizeChange(even) {
+function textSizeChange() {
   refs.textChange.style.fontSize = refs.controlRange.value + "px";
 }
