@@ -1,3 +1,5 @@
+"use strict";
+
 const refs = {
   controlMenu: document.querySelector("#controls"),
   renderBtn: document.querySelector('[data-action="render"]'),
@@ -5,7 +7,7 @@ const refs = {
   placeForBoxes: document.querySelector("#boxes"),
 };
 
-const inputControl = refs.controlMenu.firstElementChild; // счетчик, куда пользователь вводит кол-во боксов, которое он хочет создать
+let inputControl = refs.controlMenu.firstElementChild; // счетчик, куда пользователь вводит кол-во боксов, которое он хочет создать
 let baseSize = 30;
 
 refs.renderBtn.addEventListener("click", getAmount); // создаем ф-ю на создание определенного к-ва боксов
@@ -18,9 +20,9 @@ function getAmount() {
   createBoxes(amount);
 }
 
+const fragment = document.createDocumentFragment(); // создаем фрагмент, в который помещаем кол-во боксов (div), которые перебрали через цикл for
 // создает боксы, перебирает кол-во, добовляет размер
 function createBoxes(amount) {
-  const fragment = document.createDocumentFragment(); // создаем фрагмент, в который помещаем кол-во боксов (div), которые перебрали через цикл for
   for (let i = 0; i < amount; i++) {
     const newBox = document.createElement("div"); // создаем div
     baseSize += 10;

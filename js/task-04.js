@@ -1,6 +1,4 @@
-// const counterValue = document.querySelector("#value");
-// const decrementBtn = document.querySelector('[data-action="decrement"]');
-// const incrementBtn = document.querySelector('[data-action="increment"]');
+"use strict";
 
 const refs = {
   counterValue: document.querySelector("#value"),

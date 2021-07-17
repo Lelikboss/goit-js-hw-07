@@ -1,3 +1,5 @@
+"use strict";
+
 const refs = {
   input: document.querySelector("#validation-input"),
 };
